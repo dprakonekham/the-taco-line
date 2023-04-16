@@ -18,24 +18,50 @@ function component() {
     nav.style.alignItems = "center";
     nav.style.justifyContent = "center";
     nav.style.gap = "20px";
+    nav.style.height = "10vh";
 
     const home = document.createElement("button");
     home.textContent = "HOME";
+    home.style.background = "none";
+    home.style.color = "white";
+    home.style.border = "none";
+    home.style.fontSize = "24px";
 
     const menu = document.createElement("button");
     menu.textContent = "MENU";
+    menu.style.background = "none";
+    menu.style.color = "white";
+    menu.style.border = "none";
+    menu.style.fontSize = "24px";
 
     const about = document.createElement("button");
-    about.textContent = "ABOUT";  
+    about.textContent = "ABOUT";
+    about.style.background = "none";  
+    about.style.color = "white";
+    about.style.border = "none";
+    about.style.fontSize = "24px";
 
     const content = document.createElement("div");
+    content.classList.add("content");
+
+    content.appendChild(homeLoad());
 
     home.addEventListener(`click`, function(e){
+      while(content.firstChild){
+        content.removeChild(content.lastChild)
+      }
+      content.appendChild(homeLoad());
     });
     menu.addEventListener(`click`, function(e){
+      while(content.firstChild){
+        content.removeChild(content.lastChild)
+      }[]
       content.appendChild(menuLoad());
     });
     about.addEventListener(`click`, function(e){
+      while(content.firstChild){
+        content.removeChild(content.lastChild)
+      }
       content.appendChild(aboutLoad());
     });
 
