@@ -26,6 +26,7 @@ function component() {
   home.style.color = "white";
   home.style.border = "none";
   home.style.fontSize = "24px";
+  home.style.textShadow = "1px 1px 2px black";
 
   const menu = document.createElement("button");
   menu.textContent = "MENU";
@@ -33,6 +34,7 @@ function component() {
   menu.style.color = "white";
   menu.style.border = "none";
   menu.style.fontSize = "24px";
+  menu.style.textShadow = "1px 1px 2px black";
 
   const about = document.createElement("button");
   about.textContent = "ABOUT";
@@ -40,6 +42,7 @@ function component() {
   about.style.color = "white";
   about.style.border = "none";
   about.style.fontSize = "24px";
+  about.style.textShadow = "1px 1px 2px black";
 
   const content = document.createElement("div");
   content.classList.add("content");
@@ -63,6 +66,7 @@ function component() {
   viewMenuButton.style.backgroundColor = "green";
   viewMenuButton.style.color = "white";
   viewMenuButton.textContent = "View Menu";
+  viewMenuButton.style.textShadow = "1px 1px 2px black";
   viewMenuButton.addEventListener(`click`, function(e){
     while(content.firstChild){
       content.removeChild(content.lastChild)
@@ -91,6 +95,7 @@ function component() {
     viewMenuButton.style.backgroundColor = "green";
     viewMenuButton.style.color = "white";
     viewMenuButton.textContent = "View Menu";
+    viewMenuButton.style.textShadow = "1px 1px 2px black";
     viewMenuButton.addEventListener(`click`, function(e){
       while(content.firstChild){
         content.removeChild(content.lastChild)
