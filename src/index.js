@@ -1,13 +1,12 @@
 import "./style.css";
 import taco from "./assets/images/background-image.jpg"
-import homeLoad from "./modules/home";
 import menuLoad from "./modules/menu";
 import aboutLoad from "./modules/about";
 
 function component() {
   const container = document.createElement("div");
   container.classList.add("container");
-  container.setAttribute("id","container");
+  container.setAttribute("id", "container");
   container.style.display = "flex";
   container.style.flexDirection = "column";
   container.style.backgroundImage = 'url('+taco+')';
@@ -44,9 +43,25 @@ function component() {
 
   const content = document.createElement("div");
   content.classList.add("content");
-  content.setAttribute("id","content");
-  const viewMenuButton = document.createElement("Button");
+  content.setAttribute("id", "content");
+  content.style.display = "flex";
+  content.style.flexDirection = "column";
+
+  const homeTitle = document.createElement("div");
+  homeTitle.style.display = "flex";
+  homeTitle.style.flexDirection = "column";
+  homeTitle.style.color = "#ccff15";
+  homeTitle.innerHTML = "The<br/>Taco<br/>Line"
+  homeTitle.style.fontSize = "72px";
+  homeTitle.style.textShadow = "1px 1px 2px black";
+  content.appendChild(homeTitle);
+
+  const viewMenuButton = document.createElement("button");
+  viewMenuButton.style.fontSize = "32px";
+  viewMenuButton.style.fontStyle = "italic";
+  viewMenuButton.style.borderRadius = "12px";
   viewMenuButton.style.backgroundColor = "green";
+  viewMenuButton.style.color = "white";
   viewMenuButton.textContent = "View Menu";
   viewMenuButton.addEventListener(`click`, function(e){
     while(content.firstChild){
@@ -60,8 +75,21 @@ function component() {
     while(content.firstChild){
       content.removeChild(content.lastChild)
     }
-    const viewMenuButton = document.createElement("Button");
+    const homeTitle = document.createElement("div");
+    homeTitle.style.display = "flex";
+    homeTitle.style.flexDirection = "column";
+    homeTitle.style.color = "#ccff15";
+    homeTitle.innerHTML = "The<br/>Taco<br/>Line"
+    homeTitle.style.fontSize = "72px";
+    homeTitle.style.textShadow = "1px 1px 2px black";
+    content.appendChild(homeTitle);
+
+    const viewMenuButton = document.createElement("button");
+    viewMenuButton.style.fontSize = "32px";
+    viewMenuButton.style.fontStyle = "italic";
+    viewMenuButton.style.borderRadius = "12px";
     viewMenuButton.style.backgroundColor = "green";
+    viewMenuButton.style.color = "white";
     viewMenuButton.textContent = "View Menu";
     viewMenuButton.addEventListener(`click`, function(e){
       while(content.firstChild){
